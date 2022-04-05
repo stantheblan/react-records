@@ -11,3 +11,7 @@ export const getRecords = () => {
     const URL = `http://localhost:3001/records`
     return axios.get(URL)
 }
+export const deleteRecord = id => {
+    const URL = `http://localhost:3001/records/${id}`
+    return axios.delete(URL)
+}
