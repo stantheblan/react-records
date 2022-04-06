@@ -18,13 +18,13 @@ export function New() {
         nav('/')
     }
   return (
-      <div> 
+      <div className='esRecordDiv'> 
           <form onSubmit={addNewRecord}>
-            <input type='text' name='artist' />
-            <input type='text' name='title' />
-            <input type='text' name='cover' />
-            <input type='number' name='year' />
-            <input type='text' name='genre' />
+            Artist <input type='text' name='artist' /><br/>
+            Title <input type='text' name='title' /><br/>
+            Cover <input type='text' name='cover' /><br/>
+            Year <input type='number' name='year' /><br/>
+            Genre <input type='text' name='genre' /><br/>
             <input type={'submit'}/>
           </form>
       </div>
