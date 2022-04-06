@@ -17,10 +17,14 @@ export function Show() {
   }
   
   return (
-    <div>
+    <div className='esRecordDiv'>
         <h1>{data.title}</h1><br/>
-        <br/>
+        <img src={data.cover} alt=""/><br/>
+        Artist: {data.artist}<br/>
+        Year: {data.year}<br/>
+        Genre: {data.genre}<br/>
         <button onClick={deleteTheRecord}>Delete</button>
+        <button onClick={()=>{nav(`/${id}/edit`)}}>Edit</button>
     </div>
   )
 }
