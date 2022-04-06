@@ -10,15 +10,21 @@ export function Records() {
 
   return (
     <div>
-      <h1>Records List</h1>
-      {
-        recordsArray.map((e, i) => 
+      <h1 id='title'>Records List</h1><br/>
+      <div className='records'>
         {
-            return (
-                <a href={`/${e._id}`} key={i}>{e.title}<br/></a>
-            )
-        })
-      }
+          recordsArray.map((e, i) => 
+          {
+              return (
+                <div className='recordDiv' key={i}>
+                  <a href={`/${e._id}`} >
+                    {e.title} ({e.year})
+                    <img src={e.cover} alt=""/><br/></a>
+                </div>
+              )
+          })
+        }
+      </div>
     </div>
   )
 }
